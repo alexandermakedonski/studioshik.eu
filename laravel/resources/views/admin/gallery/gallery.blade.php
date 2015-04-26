@@ -22,7 +22,7 @@
   		left: 10px;
 	}
 	#drop-target {
-		margin-top: 25px;
+		/*margin-top: 25px;
 		left: 12px;
 		border: 5px dashed #999;
 		text-align: center;
@@ -32,7 +32,7 @@
 		line-height: 200px;
 		cursor: pointer;
 		width: 1450px;
-		max-width: 1450px;
+		max-width: 1450px;*/
 	}
 	.progress {
 		height: 10px;
@@ -111,9 +111,8 @@
 		@foreach ($categories as $category)
 			<div id="{{$category->id}}" class="col-lg-12">
                 <h1 class="page-header">{{$category->name}}</h1>
-                <div id="drop-target"><div id="dropelement{{$category->id}}">Поставете файл!</div></div>
+                {{-- <div id="drop-target"><div id="dropelement{{$category->id}}">Поставете файл!</div></div> --}}
 				<div id="filelist{{$category->id}}"></div>
-				<script type="text/javascript" src="/assets/admin/js/jquery-1.11.2.js"></script>
 				<script type="text/javascript">
 							$(function() {
 								function ajaxCallBack(n,data,file){
@@ -123,8 +122,8 @@
 								var uploader = new plupload.Uploader({
 							        // General settings
 							        runtimes : 'html5',
-									browse_button : 'dropelement{{$category->id}}',
-									drop_element: "dropelement{{$category->id}}",
+									browse_button : '{{$category->id}}',
+									drop_element: "{{$category->id}}",
 							        url : '/admin/gallery/saveimage',
 							        chunk_size : '50kb',
 							        resize : {  quality : 70, crop: true },
