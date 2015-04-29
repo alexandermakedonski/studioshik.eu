@@ -1,26 +1,52 @@
 @extends('admin.admin')
 
 @section('content')
-<div class="container-fluid">
-	<div class="row" style="margin-top: 200px;">
-		<div class="col-md-8 col-md-offset-2">
-			<div class="panel panel-default">
-				<div class="panel-heading">Изтриване на категория</div>
-				<div class="panel-body">
-					<form method="POST" action="/admin/gallery/dellcategory">
-					    <label>Категории
-						 	<select name="id" method="POST"class="form-control input-sm">
-								@foreach ($categories as $category)
-										<option value="{{$category->id}}">{{ $category->name }}</option>
-								@endforeach
-							</select>
-						</label>
-							<input type="submit" class="btn btn-primary" name="delete" value="Изтриване">
-							<input type="hidden" name="_token" value="{{ csrf_token() }}">
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+    <style type="text/css">
+        .col-xs-6 {
+            margin-top: 5px;
+            font-size: 13px;
+            cursor: default;
+            border-bottom: 1px dashed #D2E7FA;
+        }
+
+        .show-grid [class^=col-] {
+            border: 1px solid #D2E7FA;
+        }
+
+        .col-xs-6 a {
+            position: relative;
+            top: -3px;
+            float: right;
+            margin-right: 3px;
+
+        }
+
+    </style>
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Изтриване на категория</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Изтриване на категория
+                </div>
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                    @foreach ($categories as $category)
+                        <div class="col-xs-6">{{ $category->name }}
+                            <a class="btn btn-outline btn-primary btn-sm"
+                               href="/admin/gallery/dellcategory/{{$category->id}}">Изтрий</a>
+                        </div>
+                    @endforeach
+                </div>
+                <!-- /.panel-body -->
+            </div>
+            <!-- /.panel -->
+        </div>
+    </div>
 @endsection
+

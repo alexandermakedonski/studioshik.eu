@@ -21,19 +21,6 @@
 		top: -32px;
   		left: 10px;
 	}
-	#drop-target {
-		/*margin-top: 25px;
-		left: 12px;
-		border: 5px dashed #999;
-		text-align: center;
-		color: #999;
-		font-size: 20px;
-		height: 200px;
-		line-height: 200px;
-		cursor: pointer;
-		width: 1450px;
-		max-width: 1450px;*/
-	}
 	.progress {
 		height: 10px;
 		width: 100px;
@@ -65,63 +52,22 @@
 		margin-left: 25px;
   		margin-top: 25px;
 	}
-	@media (max-width: 1680px) {
-
-	    #drop-target{
-	      width: 1120px;
-	    }
-	}
-	@media (max-width: 1525px) {
-
-	    #drop-target{
-	      width: 955px;
-	    }
-	}
-	@media (max-width: 1365px) {
-
-	    #drop-target{
-	      width: 790px;
-	    }
-	}
-	@media (max-width: 1200px) {
-
-	    #drop-target{
-	      width: 630px;
-	    }
-	}
-	@media (max-width: 1035px) {
-
-	    #drop-target{
-	      width: 465px;
-	    }
-	}
-	@media (max-width: 870px) {
-
-	    #drop-target{
-	      width: 300px;
-	    }
-	}
-	#dropelement{
-		width: 100%;
-		height: 100%;
-	}
 </style>
 </script>
 <pre id="console" style="display:none"></pre>
 		@foreach ($categories as $category)
 			<div id="{{$category->id}}" class="col-lg-12">
                 <h1 class="page-header">{{$category->name}}</h1>
-                {{-- <div id="drop-target"><div id="dropelement{{$category->id}}">Поставете файл!</div></div> --}}
 				<div id="filelist{{$category->id}}"></div>
 				<script type="text/javascript">
 							$(function() {
 								function ajaxCallBack(n,data,file){
-									$( "#{{$category->id}}" ).append( "<label><div class='gallery'><img class='nonselected' src='/laravel/public/assets/images/gallery/"+n+"/"+file.name+"'/></div><input  class='photoCheck' checked=''  id='switch-size' data-size='mini' value='"+data+"' type='checkbox'/></label>");
+									$( "#{{$category->id}}" ).append( "<label><div class='gallery'><img class='nonselected' src='/assets/images/gallery/"+n+"/"+file.name+"'/></div><input  class='photoCheck' checked=''  id='switch-size' data-size='mini' value='"+data+"' type='checkbox'/></label>");
 									$(".photoCheck").bootstrapSwitch();
 								}
 								var uploader = new plupload.Uploader({
 							        // General settings
-							        runtimes : 'html5',
+							        runtimes : 'html5,flash,silverlight,html4',
 									browse_button : '{{$category->id}}',
 									drop_element: "{{$category->id}}",
 							        url : '/admin/gallery/saveimage',
@@ -134,8 +80,6 @@
 							                {title : "Image files", extensions : "jpg,gif,png,jpeg"}
 							            ]
 							        },						
-									// Sort files
-									sortable: true,
 									// Enable ability to drag'n'drop files onto the widget (currently only HTML5 supports that)
 									dragdrop: true,
 									flash_swf_url : '/assets/js/Moxie.swf',
@@ -201,7 +145,7 @@
 		   			@if($image->category == $category->id)
 					  	<label>
 						 	<div class="gallery">
-						  	    <img class="nonselected" src="/laravel/public/assets/images/gallery/{{ $image->photo }}"/>
+						  	    <img class="nonselected" src="/assets/images/gallery/{{ $image->photo }}"/>
 					   		</div>
 					   		@if($image->show == 0)
 							    <input  class="photoCheck" checked=""  id="switch-size" data-size="mini" value="{{ $image->id }}" type="checkbox"/>

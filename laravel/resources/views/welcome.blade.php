@@ -632,7 +632,7 @@
                         @foreach($gallery as $photo)
                             @if($gallcat->id == $photo->category && $photo->show == 0 )
                                 <div id="{{$gallcat->id}}" class="gallery_pics">
-                                    <a href="/laravel/public/assets/images/gallery/{{$photo->photo}}" rel="gallery" class="pirobox_gall first" rev="0"><img src="/laravel/public/assets/images/gallery/{{$photo->photo}}" width="100%" height="100%">
+                                    <a href="/assets/images/gallery/{{$photo->photo}}" rel="gallery" class="pirobox_gall first" rev="0"><img src="/assets/images/gallery/{{$photo->photo}}" width="100%" height="100%">
                                     </a>
                                 </div>
                             @endif
@@ -672,7 +672,7 @@
                                                         <div class="grid-post swatch-red-white">
                                                             <article class="post post-showinfo">
                                                                 <div class="post-media">
-                                                                    <a class="feature-image  hover-animate" href="/news/{{$new->id}}" title="{{$new->title}}"><img alt="some image" src="/laravel/public/assets/images/news/{{$new->image}}"> <i class="fa fa-comments-o"> Прочети цялата статия</i>
+                                                                    <a class="feature-image  hover-animate" href="/news/{{$new->id}}" title="{{$new->title}}"><img alt="some image" src="/assets/images/news/{{$new->image}}"> <i class="fa fa-comments-o"> Прочети цялата статия</i>
                                                                     </a>
                                                                 </div>
                                                                 <div class="post-head text-center">
@@ -694,7 +694,7 @@
                                                         <div class="grid-post swatch-red-white">
                                                             <article class="post post-showinfo">
                                                                 <div class="post-media">
-                                                                    <a class="feature-image  hover-animate" href="/news/{{$new->id}}" title="{{$new->title}}"><img alt="some image" src="/laravel/public/assets/images/news/{{$new->image}}"> <i class="fa fa-comments-o"> Прочети цялата статия</i>
+                                                                    <a class="feature-image  hover-animate" href="/news/{{$new->id}}" title="{{$new->title}}"><img alt="some image" src="/assets/images/news/{{$new->image}}"> <i class="fa fa-comments-o"> Прочети цялата статия</i>
                                                                     </a>
                                                                 </div>
                                                                 <div class="post-head text-center">
@@ -727,7 +727,7 @@
                                                         <div class="grid-post swatch-red-white">
                                                             <article class="post post-showinfo">
                                                                 <div class="post-media">
-                                                                    <a class="feature-image  hover-animate" href="/news/{{$new->id}}" title="{{$new->title}}"><img alt="some image" src="/laravel/public/assets/images/news/{{$new->image}}"> <i class="fa fa-comments-o"> Прочети цялата статия</i>
+                                                                    <a class="feature-image  hover-animate" href="/news/{{$new->id}}" title="{{$new->title}}"><img alt="some image" src="/assets/images/news/{{$new->image}}"> <i class="fa fa-comments-o"> Прочети цялата статия</i>
                                                                     </a>
                                                                 </div>
                                                                 <div class="post-head text-center">
@@ -748,7 +748,7 @@
                                                             <div class="grid-post swatch-red-white">
                                                                 <article class="post post-showinfo">
                                                                     <div class="post-media">
-                                                                        <a class="feature-image  hover-animate" href="/news/{{$new->id}}" title="{{$new->title}}"><img alt="some image" src="/laravel/public/assets/images/news/{{$new->image}}"> <i class="fa fa-comments-o"> Прочети цялата статия</i>
+                                                                        <a class="feature-image  hover-animate" href="/news/{{$new->id}}" title="{{$new->title}}"><img alt="some image" src="/assets/images/news/{{$new->image}}"> <i class="fa fa-comments-o"> Прочети цялата статия</i>
                                                                         </a>
                                                                     </div>
                                                                     <div class="post-head text-center">
@@ -790,7 +790,7 @@
                                         <div class="allnewsposition">
                                             @foreach($news as $new)
                                             <div  class="allnewsconf">
-                                                <a href="/news/{{$new->id}}"><figcaption><div><img src="/laravel/public/assets/images/news/{{$new->image}}"></div></figcaption></a>
+                                                <a href="/news/{{$new->id}}"><figcaption><div><img src="/assets/images/news/{{$new->image}}"></div></figcaption></a>
                                                 <div class="titleallNews"><p>{{$new->title}}</p></div>
                                                 <div class="textallNews"><p>{{ str_limit($new->text, $limit = 70, $end = '...') }}</p></div>
                                             </div>

@@ -7,7 +7,8 @@
 	"require": {
 		"laravel/framework": "5.0.*",
 		"kalnoy/nestedset": "~2.4",
-		"jildertmiedema/laravel-plupload": "dev-master"
+		"jildertmiedema/laravel-plupload": "dev-master",
+		"illuminate/html": "~5.0"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "~4.0",
