@@ -22,43 +22,43 @@
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-						<form class="form-horizontal" role="form" method="POST" action="/admin/promotions/promotion/select/correction/complete">
-						<input type="hidden" name="_token" value="{{ csrf_token() }}">
-						@foreach($promotions as $promotion)
-							<div class="form-group">
-								<label class="col-md-4 control-label">Име</label>
-								<div class="col-md-6">
-									<input type="text" class="form-control" name="name" value="{{ $promotion->name }}">
-									<input type="hidden" class="form-control" name="id" value="{{ $promotion->id }}">
+							<form class="form-horizontal" role="form" method="POST" action="/admin/promotions/promotion/select/correction/complete">
+								<input type="hidden" name="_token" value="{{ csrf_token() }}">
+								@foreach($promotions as $promotion)
+									<div class="form-group">
+										<label class="col-md-4 control-label">Име</label>
+										<div class="col-md-6">
+											<input type="text" class="form-control" name="name" value="{{ $promotion->name }}">
+											<input type="hidden" class="form-control" name="id" value="{{ $promotion->id }}">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-4 control-label">Цeна</label>
+										<div class="col-md-6">
+											<input type="text" class="form-control" name="price" value="{{ $promotion->price }}">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-4 control-label">Процент</label>
+										<div class="col-md-6">
+											<input type="text" class="form-control" name="percent" value="{{ $promotion->percent }}">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-4 control-label">Текст</label>
+										<div class="col-md-6">
+											<textarea class="form-control" name="popuptext" rows="5">{{ $promotion->popuptext }}</textarea>
+										</div>
+									</div>
+								@endforeach
+								<div class="form-group">
+									<div class="col-md-6 col-md-offset-4">
+										<button type="submit" class="btn btn-primary">
+											Коригирай
+										</button>
+									</div>
 								</div>
-							</div>
-							<div class="form-group">
-								<label class="col-md-4 control-label">Цeна</label>
-								<div class="col-md-6">
-									<input type="text" class="form-control" name="price" value="{{ $promotion->price }}">
-								</div>
-							</div>
-							<div class="form-group">
-								<label class="col-md-4 control-label">Процент</label>
-								<div class="col-md-6">
-									<input type="text" class="form-control" name="percent" value="{{ $promotion->percent }}">
-								</div>
-							</div>
-							<div class="form-group">
-								<label class="col-md-4 control-label">Текст</label>
-								<div class="col-md-6">
-									<textarea class="form-control" name="popuptext" rows="5">{{ $promotion->popuptext }}</textarea>
-								</div>
-							</div>
-						@endforeach
-						<div class="form-group">
-							<div class="col-md-6 col-md-offset-4">
-								<button type="submit" class="btn btn-primary">
-									Коригирай
-								</button>
-							</div>
-						</div>
-					</form>
+							</form>
 						</div>
                         <!-- .panel-body -->
                     </div>

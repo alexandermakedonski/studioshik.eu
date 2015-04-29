@@ -25,7 +25,7 @@
 				display: inline-block;
 			}
 
-			.title {
+		.title {
 				font-size: 72px;
 				margin-bottom: 40px;
 			}
@@ -34,7 +34,7 @@
 	<body>
 		<div class="container">
 			<div class="content">
-				<div class="title">Be right back.</div>
+	<div class="title">Be right back.</div>
 			</div>
 		</div>
 	</body>

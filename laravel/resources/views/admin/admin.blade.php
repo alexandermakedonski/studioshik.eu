@@ -34,6 +34,10 @@
 
     <link href="/assets/admin/bootstrap-switch-master/dist/css/bootstrap3/bootstrap-switch.css" rel="stylesheet">
 
+
+     <script src="/assets/admin/js/jquery-1.11.2.js"></script>
+
+
 </head>
 
 <body>

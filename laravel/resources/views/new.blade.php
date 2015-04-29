@@ -93,7 +93,7 @@
                         <div class="fb-page" data-href="https://www.facebook.com/pages/%D0%A1%D1%82%D1%83%D0%B4%D0%B8%D0%BE-%D0%A8%D0%98%D0%9A/1472700636293945" data-width="330" data-height="400" data-hide-cover="false" data-show-facepile="true" data-show-posts="true"></div>
                     </div>
                     @foreach($newTemp as $new)   
-                            <img alt="some image" src="/laravel/public/assets/images/news/{{$new->image}}"></br></br>
+                            <img alt="some image" src="/assets/images/news/{{$new->image}}"></br></br>
                         <h1 class="hairline">{{$new->title}}</h1><br>
                         <div class="row">
                             <div class="col-md-9">

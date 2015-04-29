@@ -62,7 +62,7 @@ Route::get('/admin/gallery/addcategory','GalleryController@addGalleryCategory');
 Route::post('/admin/gallery/addcategory','GalleryController@postGalleryCategory');
 
 Route::get('/admin/gallery/dellcategory','GalleryController@delGalleryCategory');
-Route::post('/admin/gallery/dellcategory','GalleryController@postDelGalleryCategory');
+Route::get('/admin/gallery/dellcategory/{id}','GalleryController@postDelGalleryCategory');
 
 Route::get('/admin/gallery','GalleryController@galleryIndex');
 Route::post('/admin/gallery/showindex','GalleryController@showIndex');
@@ -73,7 +73,8 @@ Route::get('/admin/news/addnew','NewController@addNew');
 Route::post('/admin/news/addnew','NewController@postNew');
 
 Route::get('/admin/news/new/select','NewController@newCorrection');
-Route::post('/admin/news/new/select/correction','NewController@postNewCorrection');
+Route::get('/admin/news/new/select/correction/{id}','NewController@postNewCorrection');
+Route::get('/admin/news/new/select/delete/{id}','NewController@postNewDel');
 Route::post('/admin/news/new/select/correction/complete','NewController@postNewCorrectionComplete');
 
 /*
