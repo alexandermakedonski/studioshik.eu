@@ -22,7 +22,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['name', 'email', 'password'];
+	protected $fillable = ['name', 'password'];
 
 	/**
 	 * The attributes excluded from the model's JSON form.
@@ -30,13 +30,5 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	 * @var array
 	 */
 	protected $hidden = ['password', 'remember_token'];
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     * A user may create many DMCA notices.
-     */
-    public function notices(){
-        return $this->hasMany('App\Notice')->latest()->where('content_removed',0);
-    }
 
 }

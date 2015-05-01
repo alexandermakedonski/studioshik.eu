@@ -135,9 +135,9 @@ return [
 		'Illuminate\Translation\TranslationServiceProvider',
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
-        'Illuminate\Html\HtmlServiceProvider',
-        'Laracasts\Flash\FlashServiceProvider',
 
+        'Illuminate\Html\HtmlServiceProvider',
+        'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
 		/*
 		 * Application Service Providers...
 		 */
@@ -146,6 +146,7 @@ return [
 		'App\Providers\ConfigServiceProvider',
 		'App\Providers\EventServiceProvider',
 		'App\Providers\RouteServiceProvider',
+		'JildertMiedema\LaravelPlupload\LaravelPluploadServiceProvider',
 
 	],
 
@@ -194,9 +195,9 @@ return [
 		'URL'       => 'Illuminate\Support\Facades\URL',
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
+		'Plupload'        => 'JildertMiedema\LaravelPlupload\Facades\Plupload',
         'Form'      => 'Illuminate\Html\FormFacade',
         'Html'      => 'Illuminate\Html\HtmlFacade',
-        'Flash'     => 'Laracasts\Flash\Flash',
 
 	],
 

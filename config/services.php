@@ -15,12 +15,12 @@ return [
 	*/
 
 	'mailgun' => [
-		'domain' => '',
-		'secret' => '',
+		'domain' => 'https://api.mailgun.net/v3/sandbox95c2eb1fe73645ff8f67843aace58538.mailgun.org',
+		'secret' => 'key-f3449bc0f47122b60da44786401888fe',
 	],
 
 	'mandrill' => [
-		'secret' => env('MANDRILL_KEY'),
+		'secret' => '',
 	],
 
 	'ses' => [
@@ -30,7 +30,7 @@ return [
 	],
 
 	'stripe' => [
-		'model'  => 'App\User',
+		'model'  => 'User',
 		'secret' => '',
 	],
 

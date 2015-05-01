@@ -15,7 +15,7 @@ return [
 	|
 	*/
 
-	'driver' => env('MAIL_DRIVER', 'mandrill'),
+	'driver' => 'smtp',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -28,7 +28,7 @@ return [
 	|
 	*/
 
-	'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+	'host' => 'smtp.mailgun.org',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -41,7 +41,7 @@ return [
 	|
 	*/
 
-	'port' => env('MAIL_PORT', 587),
+	'port' => 587,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -54,7 +54,7 @@ return [
 	|
 	*/
 
-	'from' => ['address' => 'dmcasender@gmail.com', 'name' => 'DMCA Sender'],
+	'from' => ['address' => 'shik@shik.bg', 'name' => 'studioshik'],
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return [
 	|
 	*/
 
-	'username' => env('MAIL_USERNAME'),
+	'username' =>'postmaster@sandbox95c2eb1fe73645ff8f67843aace58538.mailgun.org',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return [
 	|
 	*/
 
-	'password' => env('MAIL_PASSWORD'),
+	'password' => 'cbe553aea90677fae2537e799dbb9795',
 
 	/*
 	|--------------------------------------------------------------------------
